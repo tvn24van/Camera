@@ -1,0 +1,5 @@
+{
+  "entrypoint": "pl.tvn24van.camera.extension.CameraExtension",
+  "name": "CameraExtension",
+  "version": "1.0.0"
+}
