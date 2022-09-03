@@ -1,8 +1,8 @@
 package pl.tvn24van.camera;
 
 import net.minestom.server.entity.Entity;
-import net.minestom.server.entity.EntityType;
 import net.minestom.server.entity.Player;
+import net.minestom.server.entity.EntityType;
 import net.minestom.server.network.packet.server.play.CameraPacket;
 import net.minestom.server.network.packet.server.play.RespawnPacket;
 
@@ -37,9 +37,9 @@ public final class Camera {
 			return;
 		}
 
-		final Entity entity = new Entity(cameraType.getEntityType());
+		final Entity entity = new Entity(cameraType.entityType);
 		entity.setAutoViewable(false);
-		entity.addViewer(player); // in order to work player needs to see this entity
+		entity.addViewer(player);
 		entity.setInstance(player.getInstance(), player.getPosition());
 
 		final CameraPacket cameraPacket = new CameraPacket(entity);
